@@ -19,6 +19,9 @@ class FieldVector(ColumnVector):
 
         return self.field[i]
 
+    def to_list(self):
+        return self.field.to_pylist()
+
     @property
     def data_type(self) -> pa.DataType:
         match self.field:
